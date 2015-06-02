@@ -13,8 +13,13 @@
   </div>
   <div id="columns">
     <div id="side">
+      <div id="cart">
+        <% if @cart %>
+        <%= render @cart %>
+        <% end %>
+      </div>
       <ul>
-        <li><a> Home </a></li>
+        <li><a href="http://localhost:3000/"> Home </a></li>
         <li><a> Questions </a></li>
         <li><a> News </a></li>
         <li><a> Contact </a></li>

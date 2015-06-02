@@ -4,6 +4,7 @@ class Product < ActiveRecord::Base
   #validates title: uniqueness:  true
   validates :image_url, allow_blank: true, format: { with: %r{\.(gif|jpg|png)\Z}i, message: 'file must be type GIF, JPG or PNG'}
   has_many :line_items
+  has_many :orders, through: :line_items
   before_destroy :ensure_not_referenced_by_any_line_item
 def self.latest
   Product.order(:updated_at).last
