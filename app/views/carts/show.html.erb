@@ -1,0 +1,30 @@
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+
+<%= render @cart %>
+
+<!-- ................rendering will be done......................
+<h1> Your Cart </h1>
+<ul>
+  .................done using partials................
+  <% @cart.line_items.each do |item| %>
+  <li> <%= item.product.title %> <br> Quantity: <%= item.quantity %>
+  <br> Price: <%= item.price %> </li>
+  <% end %>
+</ul>
+.............................................................
+
+<%= render(@cart.line_items) %>
+
+
+<h2> Total: <%= @cart.total_price %></h2>
+
+<%= button_to 'Empty Cart', @cart, method: :delete, data: {confirm: "Are you sure?"} %>
+
+
+.........................................................
+<%= link_to 'Edit', edit_cart_path(@cart) %> |
+...................................................
+<%= link_to 'Back', store_path %>
+-->
